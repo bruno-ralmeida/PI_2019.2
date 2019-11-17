@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/css/bootstrap.css">
+    <link rel="stylesheet" href="style/css/style.css">
+    <link rel="shortcut icon" href="style/images/motoboy.ico" type="image/x-icon">
+    <title>Login</title>
+</head>
+<body class="text-center">
+    <div class="container mt-3">
+        <div class="container-fluid">
+            <form action="" id="form-login">
+                <div class="form-group">  
+                        <div class="mx-auto" >
+                                <img src="style/images/motoboy.png" alt="">
+                            </div>
+                        <div class=" col-md-3 mx-auto" id="login-msg">
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 mx-auto">
+                                <input type="text" class="form-control" id="user" placeholder="Username" required="" autofocus="">
+                                <input type="password" class="form-control" id="pass" placeholder="Password" required="">
+                                <div class="mb-3">
+                                </div>
+                                <input id="login" type="submit" class="btn btn-outline-primary btn-sm btn-block"  value="Login">
+                            </div>
+                        </div>
+                    
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+    var btnLogin = document.querySelector("#login");
+
+    btnLogin.addEventListener("click", function(event){
+    event.preventDefault();
+    validacao();
+    });
+
+    function validacao(){
+    var form = document.querySelector("#form-login");
+    var user = form.user.value;
+    var pass = form.pass.value;
+    
+
+    if(user == "admin" && pass == "admin"){
+        window.location.replace('home.html')
+    }else {
+        var aux = document.querySelector("#login-msg");
+        var msg = `<div class="alert alert-danger" role="alert"> Dados inválidos!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+                </div>`;
+        aux.innerHTML += msg;
+        
+    } 
+    };
+    
+    </script>
+    <script src="style/js/popper.min.js"></script>
+    <script src="style/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="style/js/bootstrap.js"></script>
+</body>
+</html>
