@@ -1,0 +1,21 @@
+<!--NavBar de identificação do usuário-->
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-2 shadow ">
+        <a class="navbar-brand" href="#">
+                <img src="style/images/motoboy.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                JM Express
+        </a>
+        <div class="btn-toolbar mb-2 mb-md-0">
+                <div class="btn-group mr-2">
+        <form class="form-inline">   
+            <input type="text" class="form-control" placeholder="Buscar Ordem de Serviço" aria-label="Buscar Ordem de Serviço" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search"></i></button>        
+            </div>
+            
+        </form>
+            <!--Opções para o usuário (Mostrar Motoboys Ativos e Sair)-->    
+            <button onclick="openNav()" class="btn btn-sm btn-outline-secondary"><i class="fas fa-motorcycle"></i></button>
+            <button onclick="window.location.href='login.html'" class="btn btn-sm btn-outline-secondary" id="sair"><i class="fas fa-sign-out-alt"></i></button>       
+        </div>
+        </div>  
+</nav>

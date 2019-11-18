@@ -8,245 +8,25 @@
     <link rel="stylesheet" href="style/css/style.css">
     <link rel="stylesheet" href="style/css/all.min.css">
     <link rel="shortcut icon" href="style/images/motoboy.ico" type="image/x-icon">
-    <title>Menu</title>
-    
+    <title>Home</title> 
 </head>
-<body  id="menu">
-    <div class="text-center"  id="container">
-        <div class="fixed-top" id="loader">
-            <svg class="mt-5 mx-auto" id="loader-1">
-                <rect id="loader-2"></rect>
-            </svg>
-        </div>    
-       
+<body class="container-fluid" id="menu-init">
+    <!--Efeito de carregamento-->
+    <div class="loading"></div>
+    <!--Motoboys Online-->
+    <div class="motoboy-status"></div>
+    <!--Container Principal-->
+    <div class="container-fluid" >             
+        <!--NavBar de identificação do usuário-->
+        <div class="menu"></div>                   
+        <!--Sidebar Menu com Módulos-->  
+        <div class="menu-modulos"></div>             
+      
     </div>
     
-            <div class="container-fluid">             
-                <!--NavBar de identificação do usuário-->
-                <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-2 shadow ">
-                    <a class="navbar-brand" href="home.html">
-                            <img src="style/images/motoboy.png" width="30" height="30" class="d-inline-block align-top" alt="">
-                            JM Express
-                    </a>
-                    <div class="btn-toolbar mb-2 mb-md-0">
-                            <div class="btn-group mr-2" id="main">
-                    <form class="form-inline">   
-                        <input type="text" class="form-control" placeholder="Buscar Ordem de Serviço" aria-label="Buscar Ordem de Serviço" aria-describedby="button-addon2">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="fas fa-search"></i></button>        
-                        </div>
-                        
-                    </form>
-                    <!--NavBar de opções para o usuário-->
-                    
-                        <button onclick="openNav()" class="btn btn-sm btn-outline-secondary"><i class="fas fa-motorcycle"></i></button>
-                        <button class="btn btn-sm btn-outline-secondary"><a href="login.html"><i class="fas fa-sign-out-alt"></i></a></button>
-                    </div>
-                        
-                    </div>
-                
-                </nav>
-                
-                
-                <!--Conteúdo-->
-                <div class="container-fluid" id="menu-motoboy">
-                    <div class="row">
-                        <!--Sidebar Menu-->                       
-                        <nav class="col-md-2 d-none d-md-block bg-light sidebar mt-4 fixed-top">
-                            <div class="sidebar-sticky">
-                            <ul class="nav flex-column">
-                                <li class="nav-item">
-                                <a class="nav-link active" href="#">
-                                    <i class="fas fa-address-card"></i>
-                                    Home <span class="sr-only">(current)</span>
-                                </a>
-                                </li>
-                                <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="fas fa-receipt"></i>
-                                    Ordem de Serviço
-                                </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">
-                                        <i class="fas fa-chart-line"></i>
-                                        Faturamento
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                        <i class="fas fa-file-invoice-dollar"></i>
-                                    Financeiro
-                                </a>
-                                </li>
-                                <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="fas fa-users"></i>
-                                    Clientes
-                                </a>
-                                </li>
-                                
-                                <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="fas fa-user-friends"></i>
-                                    RH
-                                </a>
-                                </li>
-                            </ul>
-                            </div>
-                        </nav>           
-                        <main role="main" class="col-md-8 ml-sm-auto col-lg-10 px-4 mt-4">
-                            
-                            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                            <h1 class="h2">Ordem de Serviço</h1>
-                        
-                            </div>
-                            <!--Ordem de serviço-->
-                            <div class="table-responsive">
-                                <div class="container-fluid mt-2">
-                                    <div class="row">
-                                        <div class="container">
-                                            <div class="table-responsive-lg">
-                                                <table class="table table-hover">
-                                                    <thead>
-                                                        <tr>
-                                                            <th scope="col">Cód. O.S</th>
-                                                            <th scope="col">Cliente</th>
-                                                            <th scope="col">Status</th>
-                                                            <th scope="col"></th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th scope="row">3</th>
-                                                            <td>Mark</td>
-                                                            <td><span class="badge badge-success badge-pill">Disponível</span></td>
-                                                            <td>
-                                                                    <button type="button" class="btn btn-info"><i class="far fa-folder-open"></i></button>
-                                                                    <button type="button" class="btn btn-info"><i class="far fa-edit"></i></button>
-                                                                    <button type="button" class="btn btn-info"><i class="fas fa-file-import"></i></button>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">4</th>
-                                                            <td>Jacob</td>
-                                                            <td><span class="badge badge-success badge-pill">Disponível</span></td>
-                                                            <td>
-                                                                <button type="button" class="btn btn-info"><i class="far fa-folder-open"></i></button>
-                                                                <button type="button" class="btn btn-info"><i class="far fa-edit"></i></button>
-                                                                <button type="button" class="btn btn-info"><i class="fas fa-file-import"></i></button>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">5</th>
-                                                            <td>PSDB</td>
-                                                            <td><span class="badge badge-success badge-pill">Disponível</span></td>
-                                                            <td>
-                                                                <button type="button" class="btn btn-info"><i class="far fa-folder-open"></i></button>
-                                                                <button type="button" class="btn btn-info"><i class="far fa-edit"></i></button>
-                                                                <button type="button" class="btn btn-info"><i class="fas fa-file-import"></i></button>
-                                                            </td>
-                                                        </tr> 
-                                                        <tr>
-                                                            <th scope="row">6</th>
-                                                            <td>São Judas</td>
-                                                            <td><span class="badge badge-success badge-pill">Disponível</span></td>
-                                                            <td>
-                                                                <button type="button" class="btn btn-info"><i class="far fa-folder-open"></i></button>
-                                                                <button type="button" class="btn btn-info"><i class="far fa-edit"></i></button>
-                                                                <button type="button" class="btn btn-info"><i class="fas fa-file-import"></i></button>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">2</th>
-                                                            <td>PSL</td>
-                                                            <td><span class="badge badge-warning badge-pill">Em atendimento</span></td>
-                                                            <td>
-                                                                <button type="button" class="btn btn-info"><i class="far fa-folder-open"></i></button>
-                                                                <button type="button" class="btn btn-info"><i class="far fa-edit"></i></button>
-                                                                <button type="button" class="btn btn-info"><i class="fas fa-file-import"></i></button>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th scope="row">1</th>
-                                                            <td>PT</td>
-                                                            <td><span class="badge badge-warning badge-pill">Em atendimento</span></td>
-                                                            <td>
-                                                                <button type="button" class="btn btn-info"><i class="far fa-folder-open"></i></button>
-                                                                <button type="button" class="btn btn-info"><i class="far fa-edit"></i></button>
-                                                                <button type="button" class="btn btn-info"><i class="fas fa-file-import"></i></button>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>                       
-                        </main>                      
-                    </div>
-                </div>
-            </div>
-            <!--Motoboys Online-->
-            <div id="sidebarMotoboy" class="sidebar mt-4">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a>
-                    <table class="table table-dark table-hover">
-                            <thead>
-        
-                            </thead>
-                            <tr>
-                                <th class="col">Lula</th>
-                                <th class="col"> <span class="badge badge-success badge-pill">Disponível</span></th>
-                            </tr>
-                            <tr>
-                                <th class="col">Dilma</th>
-                                <th class="col"><span class="badge badge-success badge-pill">Disponível</span></th>
-                            </tr>
-                            <tr>
-                                <th class="col">Bolsonaro</th>
-                                <th class="col"><span class="badge badge-success badge-pill">Disponível</span></th>
-                            </tr>
-                            <tr>
-                                <th class="col">Amoedo</th>
-                                <th class="col"><span class="badge badge-warning     badge-pill">Em atendimento</span></th>
-                            </tr>
-                            <tr>
-                                <th class="col">Daciolo</th>
-                                <th class="col"><span class="badge badge-warning badge-pill">Em atendimento</span></th>
-                            </tr>
-                            <tr>
-                                <th class="col">Ciro Gomes</th>
-                                <th class="col"><span class="badge badge-danger badge-pill">Sem conexão</span></th>
-                            </tr>
-                        </table>
-            </div>
-       
     <!--Script para bootstrap-->
     <script src="style/js/popper.min.js"></script>
     <script src="style/js/jquery-3.4.1.js"></script>
     <script src="style/js/bootstrap.js"></script>
-    <!--Efeito de Loading-->
-    <script type="text/javascript">
-        
-        $(window).on('load', function() {
-            $("#loader").delay(2000).fadeOut("slow");
-          
-         });
-        
-        function openNav() {
-        document.getElementById("sidebarMotoboy").style.width = "250px";
-        document.getElementById("main").style.marginRight = "250px";
-        };
-
-        function closeNav(){
-        document.getElementById("sidebarMotoboy").style.width = "0px";
-        document.getElementById("main").style.marginRight = "0px";
-        };
-
-        
-       
-
-	</script>
 </body>
 </html>

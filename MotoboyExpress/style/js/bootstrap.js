@@ -4,21 +4,32 @@
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 
-  /*
+/*IMPORTANDO PAGINAS HTML*/
+$(".head").load('resources/head.html');
+$(".footer").load('resources/footer.html');
+$(".loading").load('resources/loading.html');
+$(".menu").load('resources/menu-principal.html');
+$(".menu-modulos").load('resources/menu-modulos.html');
+$(".motoboy-status").load('resources/motoboy-status.html');
+$(".acoes").load('resources/acoes.html');
+/* Efeito de carregamento */
+$(window).on('load', function() {
+	$("#loader").delay(1500).fadeOut("slow");
   
-  CRIA UM BOTÃO PARA MANTER ATIVADO O INFORMATIVO DE MOTOBOYS ATIVOS
+ });
 
-  UTILIZAR TRUE OU FALSE
+/* Função para sidebar motoboys online */
+function openNav() {
+document.getElementById("sidebarMotoboy").style.width = "250px";
+document.getElementById("main").style.marginRight = "250px";
+};
 
-  JUNTAR COM INNER HTML PARA DEIXAR RESPONSIVO
-  
-  
-  */ 
+function closeNav(){
+document.getElementById("sidebarMotoboy").style.width = "0px";
+document.getElementById("main").style.marginRight = "0px";
+};
 
-
-
-
-
+/*Funções padrões para o bootstrap*/
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery'), require('popper.js')) :
   typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'popper.js'], factory) :
