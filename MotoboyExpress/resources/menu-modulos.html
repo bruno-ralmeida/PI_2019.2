@@ -1,43 +1,57 @@
-<nav class="col-md-2 d-none d-md-block bg-light sidebar mt-3 fixed-top">
-    <div class="sidebar-sticky">
+<nav class="col-md-2 d-none d-md-block bg-dark sidebar mt-3 fixed-top">
     <ul class="nav flex-column">
-        <li class="nav-item">
-        <a class="nav-link active" href="../home.html">
-            <i class="fab fa-usps"></i>
-            Home <span class="sr-only">(current)</span>
-        </a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="../os-controle.html">
-                <i class="fas fa-receipt"></i>
-            Ordem de Serviço
-        </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="../faturamento.html">
-                <i class="fas fa-chart-line"></i>
-                Faturamento
-            </a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="../financeiro.html">
-                <i class="fas fa-file-invoice-dollar"></i>
-            Financeiro
-        </a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="../clientes.html">
-            <i class="fas fa-users"></i>
-            Clientes
-        </a>
-        </li>
+        <!--Cadastros-->
+        <div class="menu">
+            <li class="nav-item item" id="cad">
+                <a href="#cad" class="btn-menu">
+                    <i class="fas fa-users"></i> Cadastro
+                </a>
+                <div class="sMenu">
+                    <a class="nav-link" href="#">Clientes</a>
+                    <a class="nav-link" href="#">Forncedores</a>
+                    <a class="nav-link" href="#">Funcionário</a>
+                </div>
+            </li>
+        </div>
+        <!--Ordem de serviço-->
+        <div class="menu">
+            <li class="nav-item item" id="os">
+                <a href="#os" class="btn-menu">
+                    <i class="fas fa-receipt"></i> Ordem de Serviço
+                </a>
+                    <div class="sMenu">
+                        <a class="nav-link" href="../os/os-controle.html">Buscar</a>
+                        <a class="nav-link" href="../os/cad-os.html">Novo</a>
+                        <a class="nav-link" href="../os/os-controle.html">Alterar</a>
+                    </div>
+            </li>
+        </div>
+        <!--Faturamento-->
+        <div class="menu">
+            <li class="nav-item item" id="fat">
+                <a href="#fat" class="btn-menu">
+                    <i class="fas fa-chart-line"></i> Faturamento
+                </a>
+                <div class="sMenu">
+                    <a class="nav-link" href="#">Fatura</a>
+                    <a class="nav-link" href="#">Nota Fiscal</a>
+                    <a class="nav-link" href="#">Relatórios</a>
+                </div>
+            </li>
+        </div>
+        <!--Financeiro-->
+        <div class="menu">
+            <li class="nav-item item" id="finan">
+                <a href="#finan" class="btn-menu">
+                    <i class="fas fa-file-invoice-dollar"></i> Financeiro
+                </a>
+                <div class="sMenu">
+                    <a class="nav-link" href="#">Contas à Pagar</a>
+                    <a class="nav-link" href="#">Contas à Receber</a>
+                    <a class="nav-link" href="#">Relatórios</a>
+                </div>
+            </li>
+        </div>
         
-        <li class="nav-item">
-        <a class="nav-link" href="../recuros-humanos.html">
-            <i class="fas fa-user-friends"></i>
-            Recursos Humanos
-        </a>
-        </li>
-    </ul>
-    </div>
+    </ul>  
 </nav>   

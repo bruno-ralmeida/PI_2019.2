@@ -5,29 +5,28 @@
   */
 
 /*IMPORTANDO PAGINAS HTML*/
-$(".head").load('resources/head.html');
-$(".footer").load('resources/footer.html');
-$(".loading").load('resources/loading.html');
-$(".menu").load('resources/menu-principal.html');
-$(".menu-modulos").load('resources/menu-modulos.html');
-$(".motoboy-status").load('resources/motoboy-status.html');
-$(".acoes").load('resources/acoes.html');
+$(".head").load('../../resources/head.html');
+$(".footer").load('../../resources/footer.html');
+$(".loading").load('../../resources/loading.html');
+$(".menu").load('../../resources/menu-principal.html');
+$(".menu-modulos").load('../../resources/menu-modulos.html');
+$(".motoboy-status").load('../../resources/motoboy-status.html');
+$(".acoes").load('../../resources/acoes.html');
 /* Efeito de carregamento */
-$(window).on('load', function() {
-	$("#loader").delay(1500).fadeOut("slow");
-  
- });
+$(window).ready(function() {
+	$("#loader").delay(1000).fadeOut("slow");
+});
+/*FUNÇÃO PARA MOSTRAR SIDEBAR-MOTOBOY*/ 
+$(document).ready(function(){
+  $(".icon-moto").click(function(){
+    $(".icon-moto").toggleClass("active");
+    $(".btn-new").toggleClass("active");
+  });
+  $(".icon-moto").click(function(){
+    $(".sidebar-motoboy").toggleClass("active");
+  });
+});
 
-/* Função para sidebar motoboys online */
-function openNav() {
-document.getElementById("sidebarMotoboy").style.width = "250px";
-document.getElementById("main").style.marginRight = "250px";
-};
-
-function closeNav(){
-document.getElementById("sidebarMotoboy").style.width = "0px";
-document.getElementById("main").style.marginRight = "0px";
-};
 
 /*Funções padrões para o bootstrap*/
 (function (global, factory) {

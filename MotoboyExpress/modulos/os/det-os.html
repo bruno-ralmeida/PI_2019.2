@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../style/css/bootstrap.css">
+    <link rel="stylesheet" href="../../style/css/all.min.css">
+    <link rel="shortcut icon" href="../../style/images/motoboy.ico" type="image/x-icon">
+    <title>Ordem de Serviços [Detalhes]</title>
+</head>
+<body class="container-fluid">
+    <!--Motoboys Online-->
+    <div class="motoboy-status"></div>
+    <!--Container Principal-->
+    <div class="container-fluid">   
+    <!--NavBar de identificação do usuário-->
+    <div class="menu"></div>                   
+    <!--Sidebar Menu com Módulos-->  
+    <div class="menu-modulos"></div> 
+        <!--Ordem de Serivço-->  
+        <main role="main" class="col-md-8 ml-sm-auto col-lg-10 px-4 mt-4">
+            <!--Título-->
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Ordem de Serviço Cód. X</h1>
+                <div id="main" class="spinner-grow text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <!--Formuláro de dados do solicitante-->
+            <div class="col-lg-9">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Cliente</span>
+                </div>
+                <input type="text" class="form-control" value="Universidade São Judas Tadeu" aria-label="Username" aria-describedby="basic-addon1" readonly>
+            </div>          
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Contrato</span>
+                </div>
+                <input type="text" class="form-control" value="8404845" aria-label="Username" aria-describedby="basic-addon1" readonly>
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Solicitante</span>
+                </div>
+                <input type="text" class="form-control" value="João de Deus" aria-label="Username" aria-describedby="basic-addon1" readonly>
+            </div>            
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Telefone</span>
+                </div>
+                <input type="text" class="form-control" value="(11) 2799-1677" aria-label="Username" aria-describedby="basic-addon1" readonly>
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">E-mail</span>
+                </div>
+                <input type="text" class="form-control" value="joaodeus@usjt.com" aria-label="Username" aria-describedby="basic-addon1" readonly>
+            </div>    
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Local de Retirada</span>
+                </div>
+                <input type="text" class="form-control" value="Av. Vital Brasil, 1000 - Butantã, São Paulo - SP, 05503-001" aria-label="Username" aria-describedby="basic-addon1" readonly>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Local de Entrega</span>
+                </div>
+                <input type="text" class="form-control" value="R. Comendador Martins, 52 - Vila Matias, Santos - SP, 11015-530" aria-label="Username" aria-describedby="basic-addon1" readonly>
+            </div>
+
+                <!--Mapa-->
+            <iframe id="main" class="mt-2" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d116975.11106636793!2d-46.64557279547499!3d-23.623253932549353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x94ce4377fab5c1f7%3A0x865783202595786d!2sJM%20EXPRESS%20-%20Rua%20Graciliano%20Ramos%20-%20Vila%20Scarpelli%2C%20Santo%20Andr%C3%A9%20-%20SP!3m2!1d-23.6797316!2d-46.546761!4m5!1s0x9371b05154fa2b95%3A0x6187fb9a20469948!2sUniversidade%20S%C3%A3o%20Judas%20-%20Unidade%20Mooca%20-%20Rua%20Taquari%20-%20Mooca%2C%20S%C3%A3o%20Paulo%20-%20SP!3m2!1d-23.5521524!2d-46.5974897!5e0!3m2!1spt-BR!2sbr!4v1574027110592!5m2!1spt-BR!2sbr" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+            
+        </main>
+        <!--Efeito de carregamento-->
+        <div class="loading"></div>        
+    </div>
+<!--Script para bootstrap-->
+<script src="../../style/js/popper.min.js"></script>
+<script src="../../style/js/jquery-3.4.1.js"></script>
+<script src="../../style/js/bootstrap.js"></script>
+</body>
+</html>
