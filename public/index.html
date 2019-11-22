@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/css/bootstrap.css">
+    <link rel="shortcut icon" href="style/images/motoboy.ico" type="image/x-icon">
+    <title>Login</title>
+</head>
+<body class="b-login">   
+    <div class="container-fluid">
+        <div class="col col-lg-4 login-form mx-auto mt-3 p-x">
+            <form action="" id="form-login">
+                <img class=" ml-x" src="style/images/motoboy.png" alt="">
+                
+                <div id="login-msg"></div>
+                <div class="txtb m-3">
+                    <input type="text" id="user">
+                    <span data-placeholder="Usuário"></span>
+                </div>
+        
+                <div class="txtb m-3">
+                    <input type="password" id="pass" required>
+                    <span data-placeholder="Senha"></span>
+                </div>
+                <div class="m-3">
+                    <input type="submit" class="logbtn" id="btn-login" value="Login" required>
+                </div>
+            </form>
+        </div>
+    
+    </div>
+    <script src="style/js/popper.min.js"></script>
+    <script src="style/js/jquery-3.4.1.js"></script>
+    <script src="style/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        $(".txtb input").on("focus",function(){
+            $(this).addClass("focus");
+                });
+
+            $(".txtb input").on("blur",function(){
+                if($(this).val() == "")
+                $(this).removeClass("focus");
+        });
+        
+        var btnLogin = document.querySelector("#btn-login");
+
+            btnLogin.addEventListener("click", function(event){
+            event.preventDefault();  
+            validacao();
+        });
+
+        function validacao(){
+            
+            var form = document.querySelector("#form-login");
+            var user = form.user.value;
+            var pass = form.pass.value;
+
+            if(user == "admin" && pass == "admin"){
+                window.location.replace('modulos/home/home.html')
+            }else {
+                var aux = document.querySelector("#login-msg");
+                var msg =   `   <div class="m-3 alert alert-danger p-1 text-center" role="alert"> Dados inválidos!
+                                </div>`;
+                aux.innerHTML = msg;
+                
+            } 
+        };
+    </script>
+</body>
+</html>
