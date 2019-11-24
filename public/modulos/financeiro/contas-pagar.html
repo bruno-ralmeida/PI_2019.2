@@ -20,8 +20,8 @@
 
         <div class="col col-md-8 mx-auto">
             <hr class="mb-1">
-            <h4>Financeiro [Contas à Pagar</h4>
-            <form class="form-inline  offset-7">
+            <h4>Financeiro [Contas à Pagar]</h4>
+            <form class="form-inline  offset-6">
                 <input class="form-control mr-sm-2" type="search" placeholder="Buscar Documento" aria-label="Pesquisar">
                 <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Pesquisar</button>
             </form>
@@ -29,6 +29,7 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
+                        <th>Selecionar</th>
                         <th>Fornecedor</th>
                         <th>Fatura</th>
                         <th>Data Vencimento</th>
@@ -38,6 +39,7 @@
                 </thead>
                 <tbody>
                     <tr>
+                        <td><input type="checkbox"></td>
                         <td>Luz</td>
                         <td>20191</td>
                         <td>24/10/2019</td>
@@ -45,6 +47,7 @@
                         <td></td>
                     </tr>
                     <tr>
+                        <td><input type="checkbox"></td>
                         <td>Água</td>
                         <td>2019</td>
                         <td>18/10/2019</td>
@@ -52,6 +55,7 @@
                         <td></td>
                     </tr>
                     <tr>
+                        <td><input type="checkbox"></td>
                         <td>JSF Software</td>
                         <td>10030</td>
                         <td>10/10/2019</td>
@@ -59,6 +63,7 @@
                         <td></td>
                     </tr>
                     <tr>
+                        <td><input type="checkbox"></td>
                         <td>Folha de Pagamento</td>
                         <td>0001</td>
                         <td>05/10/2019</td>
@@ -80,7 +85,27 @@
                     </li>
                 </ul>
             </nav>
+            <div class="col col-md-4 offset-8">
+                <button  data-toggle="modal" data-target="#modalValidacao"  class="btn btn-primary btn-sm btn-block" type="button">Gerar Lote</button>
+            </div>
         </div> 
+        
+         <!--Modal para validação de dados enviados-->
+        <div class="modal fade" id="modalValidacao" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Lote de pagamento gerado com sucesso!</h4> 
+                </div>
+                <div class="modal-body">
+                    Importe o arquivo no sistema do banco, para realizar os pagamentos
+                </div>
+                <div class="modal-footer">
+                    <button onclick="window.location.href='contas-pagar.html'" type="button" class="btn btn-success">Continuar</button>
+                </div>
+                </div>
+            </div>
+        </div>
         <!--Efeito de carregamento-->
         <div class="loading"></div> 
     </div>
