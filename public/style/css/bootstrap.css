@@ -230,7 +230,7 @@ a.navbar-brand:hover{
 body#menu-init{
   background-attachment: fixed;
   background-size: cover;
-  background-image: url('../images/motoboy-init.png');
+  background-image: url(../images/moto-init.jpg);
 }
 /*EFEITO DE CARREGAMENTO*/
 svg#loader-1{
