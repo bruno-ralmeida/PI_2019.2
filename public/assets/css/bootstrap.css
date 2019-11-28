@@ -5,6 +5,11 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+
+ .l-os li:hover{
+  background: #368fee25;
+ }
+
 /*ERRO 404 */
 .error-404{
   background-attachment: fixed;

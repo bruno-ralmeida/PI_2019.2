@@ -7,6 +7,8 @@
 
 /*IMPORTANDO PAGINAS HTML*/
 $(".menu").load('../../resources/menu-principal.html');
+$(".menu-app").load('../../resources/menu-principal-app.html');
+$(".app-footer").load('../../resources/footer-app.html');
 $(".menu-modulos").load('../../resources/menu-modulos.html');
 $(".motoboy-status").load('../../resources/motoboy-status.html');
 $(".acoes").load('../../resources/acoes.html');

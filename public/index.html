@@ -60,7 +60,9 @@
 
             if(user == "admin" && pass == "admin"){
                 window.location.replace('modulos/home/home.html')
-            }else {
+            }else if(user == "app" && pass == "app"){
+                window.location.replace('modulos/app-mobile/home.html');
+            } else {
                 var aux = document.querySelector("#login-msg");
                 var msg =   `   <div class="m-3 alert alert-danger p-1 text-center" role="alert"> Dados inválidos!
                                 </div>`;
