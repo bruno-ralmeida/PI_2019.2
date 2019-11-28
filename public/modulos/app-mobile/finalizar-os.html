@@ -58,27 +58,28 @@
                 <input type="text" class="form-control" value="R. Comendador Martins, 52 - Vila Matias, Santos - SP, 11015-530" aria-label="Username" aria-describedby="basic-addon1" readonly>
             </div>
 
-                <!--Mapa-->
+            <!--Mapa-->
             <iframe id="main" class="mt-2" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d116975.11106636793!2d-46.64557279547499!3d-23.623253932549353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x94ce4377fab5c1f7%3A0x865783202595786d!2sJM%20EXPRESS%20-%20Rua%20Graciliano%20Ramos%20-%20Vila%20Scarpelli%2C%20Santo%20Andr%C3%A9%20-%20SP!3m2!1d-23.6797316!2d-46.546761!4m5!1s0x9371b05154fa2b95%3A0x6187fb9a20469948!2sUniversidade%20S%C3%A3o%20Judas%20-%20Unidade%20Mooca%20-%20Rua%20Taquari%20-%20Mooca%2C%20S%C3%A3o%20Paulo%20-%20SP!3m2!1d-23.5521524!2d-46.5974897!5e0!3m2!1spt-BR!2sbr!4v1574027110592!5m2!1spt-BR!2sbr" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-            
+            <label for="quardo"> <h5>Assinatura do Cliente</h5></label>
+            <canvas id="quadro" style="background: #dee4e7; width: 100%; height: 150px;"></canvas>
+
             <div class="acoes-app col-md-4 mx-auto m-5">
-                <button data-toggle="modal" data-target="#modalInicia"  class="btn btn-primary btn-sm btn-block"><i class="fas fa-chevron-circle-right"></i> Iniciar</button>
-                <button data-toggle="modal" data-target="#modalGPS"  class="btn btn-primary btn-sm btn-block"><i class="fas fa-map-marked-alt"></i> Calcular Rota</button>
-                <button class="btn btn-primary btn-sm btn-block" onclick="window.location.href='finalizar-os.html'"><i class="fas fa-clipboard-list"></i> Finalizar OS</button>
+                <button class="btn btn-primary btn-sm btn-block"><i class="fas fa-clipboard-list" onclick="window.location.href='det-os-app.html'"></i> Voltar</button>
+                <button data-toggle="modal" data-target="#modalFinaliza"  class="btn btn-primary btn-sm btn-block"><i class="fas fa-chevron-circle-right"></i> Finalizar</button>
             </div>
 
             <div class="loading"></div>
         </div>    
     </main>
      <!--Modal para validação de Inicio de corrida-->
-    <div class="modal fade" id="modalInicia" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="modalFinaliza" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4>Alerta!</h4> 
                 </div>
                 <div class="modal-body">
-                    Ordem de Serviço iniciada com sucesso!
+                    Ordem de Serviço finalizada com sucesso!
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-success"  data-dismiss="modal">Continuar</button>
@@ -86,22 +87,6 @@
             </div>
         </div>
     </div>    
-      <!--Modal para validação do GPS-->
-      <div class="modal fade" id="modalGPS" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h4>Alerta!</h4> 
-                </div>
-                <div class="modal-body">
-                    Você será redirecionado para o GPS
-                </div>
-                <div class="modal-footer">
-                    <button onclick="window.location.href='home.html'" type="button" class="btn btn-success">Continuar</button>
-                </div>
-            </div>
-        </div>
-    </div>  
     <footer class="mt-4">
         <div class="app-footer"></div>
     </footer>
@@ -110,6 +95,36 @@
     <script src="../../assets/js/popper.min.js"></script>
     <script src="../../assets/js/jquery-3.4.1.js"></script>
     <script src="../../assets/js/bootstrap.js"></script>
+    <script type="text/javascript">
+    window.onload = function(){
+        
+        var quadro = document.getElementById("quadro");
+        
+        
+        var ctx = quadro.getContext("2d");
+        
+        var desenhando = false;
+       
+        quadro.onmousedown = function(evt)
+        {
+           ctx.moveTo(evt.clientX, evt.clientY);
+           desenhando = true;
+        };
+        quadro.onmouseup = function()
+        {
+           desenhando = false;
+        };
+        quadro.onmousemove = function(evt)
+        {
+            if(desenhando)
+            {
+            ctx.lineTo(evt.clientX,evt.clientY);
+            ctx.stroke();
+            }
+        };
+    };
+    </script>
+   
 </body>
 
 </html>
